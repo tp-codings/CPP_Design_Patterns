@@ -3,6 +3,7 @@
 
 #include "../ButtonFamily/MacButton.h"
 #include "../CheckboxFamily/MacCheckbox.h"
+#include "../SliderFamily/MacSlider.h"
 #include "GUIFactory.h"
 
 class MacFactory : public GUIFactory{
@@ -15,6 +16,10 @@ class MacFactory : public GUIFactory{
 
         Checkbox* createCheckbox(){
             return new MacCheckbox();
+        }
+
+        Slider* createSlider(){
+            return new MacSlider();
         }
 };
 

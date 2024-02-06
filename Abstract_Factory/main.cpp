@@ -1,12 +1,13 @@
 #include "Application.h"
 #include "Factories/WinFactory.h"
 #include "Factories/MacFactory.h"
+#include "Factories/LinuxFactory.h"
 
 #include <stdexcept>
 #include <string>
 
 int main(){
-    std::string config = "Win";
+    std::string config = "Linux";
     GUIFactory* factory;
     Application* application;
 
@@ -14,10 +15,14 @@ int main(){
         factory = new WinFactory();
     } else if(config == "Mac"){
         factory = new MacFactory();
-    } else {
+    } else if(config == "Linux"){
+        factory = new LinuxFactory();
+    }
+    else {
         throw std::invalid_argument( "received invalid operating system" );
     }
 
     application = new Application(factory);
     application->draw();
 }
+

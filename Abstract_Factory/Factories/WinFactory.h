@@ -4,6 +4,7 @@
 #include "GUIFactory.h"
 #include "../ButtonFamily/WinButton.h"
 #include "../CheckboxFamily/WinCheckbox.h"
+#include "../SliderFamily/WinSlider.h"
 
 class WinFactory : public GUIFactory{
     public:
@@ -15,6 +16,10 @@ class WinFactory : public GUIFactory{
 
         Checkbox* createCheckbox(){
             return new WinCheckbox();
+        }
+
+        Slider* createSlider(){
+            return new WinSlider();
         }
 };
 
