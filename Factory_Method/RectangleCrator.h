@@ -3,8 +3,8 @@
 
 class RectangleCreator : public ShapeCreator{
     public:
-        std::unique_ptr<Shape> createShape() override{
-            return std::make_unique<Rectangle>();
+        Shape* createShape() override{
+            return new Rectangle;
         };
         RectangleCreator(){};
 };

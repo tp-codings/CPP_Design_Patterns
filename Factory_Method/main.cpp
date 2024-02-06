@@ -7,7 +7,9 @@
 int main() {
     RectangleCreator rectFactory;
     CircleCreator circleFactory; 
-    std::vector<std::unique_ptr<Shape>> shapes; 
+
+    std::vector<Shape*> shapes; 
+
     shapes.push_back(rectFactory.createShape());
     shapes.push_back(circleFactory.createShape());
 

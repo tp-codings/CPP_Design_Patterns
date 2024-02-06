@@ -8,7 +8,7 @@ class ShapeCreator {
     public:
     ShapeCreator(){};
     virtual ~ShapeCreator(){};
-    virtual std::unique_ptr<Shape> createShape() = 0; 
+    virtual Shape* createShape() = 0; 
 };
 
 #endif // SHAPECREATOR_H

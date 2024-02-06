@@ -5,9 +5,7 @@ class Shape{
     public:
         Shape(){};
         virtual ~Shape(){};
-        virtual void draw(){
-            std::cout << "Shape is abstract..." << std::endl;
-        };
+        virtual void draw() = 0;
 };
 
 #endif // SHAPE_H

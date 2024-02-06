@@ -3,8 +3,8 @@
 
 class CircleCreator : public ShapeCreator{
     public:
-        std::unique_ptr<Shape> createShape() override{
-            return std::make_unique<Circle>();
+        Shape* createShape() override{
+            return new Circle();
         };
         CircleCreator(){};
 };
