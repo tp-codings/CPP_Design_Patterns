@@ -7,5 +7,8 @@ int main() {
     Singleton* singletonInstance2 = Singleton::getInstance();
     singletonInstance2->showMessage();
 
+    Singleton* singletonInstance3 = Singleton::getInstance();
+    singletonInstance3->showMessage();
+
     return 0;
 }
