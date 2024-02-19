@@ -7,6 +7,7 @@
 class Warehouse{
     public:
         Warehouse() = default;
+        virtual ~Warehouse() = default;
 
         virtual std::vector<std::string> getSupportedCountries() = 0;
 
