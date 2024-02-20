@@ -7,9 +7,13 @@
 class Box : public Component{
     private:
         std::vector<Component*> _children;
+        std::string _packageInfo;
 
     public:
-        Box(){}
+        Box() = default;
+        Box(std::string packageInfo) : _packageInfo(packageInfo){
+
+        }
 
         void add(Component* component){
             this->_children.push_back(component);
@@ -31,6 +35,18 @@ class Box : public Component{
                 prize += i->calculatePrize();
             }
             return prize;
+        }
+
+        std::vector<std::string> getPackageInfo(){
+            std::vector<std::string> packageInfo;
+            packageInfo.push_back("---------------------\n" + this->_packageInfo + " contains:");
+            for(auto i : this->_children){
+                for(auto j : i->getPackageInfo()){
+                    packageInfo.push_back(j);
+                }
+            }
+            packageInfo.push_back("---------------------");
+            return packageInfo;
         }
 };
 

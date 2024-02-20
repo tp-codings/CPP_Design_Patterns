@@ -18,6 +18,12 @@ class Laptop : public Component{
         float calculatePrize(){
             return this->_prize;
         }
+
+        //immernoch Meh
+        std::vector<std::string> getPackageInfo(){
+            std::string packageInfo = "Laptop\nManufacteur: " + this->_manufacteur + "\nPrize: " + std::to_string(this->_prize);
+            return {packageInfo};
+        }
 };
 
 #endif
