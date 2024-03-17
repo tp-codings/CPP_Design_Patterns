@@ -16,27 +16,29 @@ class EncryptionDecorator : public DataSourceDecorator
         }
         ~EncryptionDecorator()
         {
-            
+
         }
 
         virtual void writeData(std::string data) override
         {
+            std::string modifiedData;
             for(auto i : data)
             {
-                i++;
+                modifiedData += i + 1;
             }
-            DataSourceDecorator::_wrappee->writeData(data);
+            DataSourceDecorator::_wrappee->writeData(modifiedData);
         }
 
         virtual std::string readData() override
         {
             std::string data = DataSourceDecorator::_wrappee->readData();
+            std::string modifiedData;
 
             for(auto i : data)
             {
-                i--;
+                modifiedData += i--;
             }
-            return data;
+            return modifiedData;
         }
 };
 #endif
