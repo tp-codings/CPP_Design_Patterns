@@ -3,9 +3,9 @@
 
 #include "DataSource.h"
 
-class DataSourceDecorator : DataSource
+class DataSourceDecorator : public DataSource
 {
-    private:
+    protected:
         DataSource* _wrappee;
 
     public:
@@ -15,11 +15,13 @@ class DataSourceDecorator : DataSource
 
         }
 
-        virtual void writeData(std::string data) override{
+        virtual void writeData(std::string data) override
+        {
             this->_wrappee->writeData(data);
         }
 
-        virtual std::string readData() override{
+        virtual std::string readData() override
+        {
             return this->_wrappee->readData();
         }
 };
