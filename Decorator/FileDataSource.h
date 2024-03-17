@@ -49,6 +49,7 @@ class FileDataSource : public DataSource
             {
                 std::cerr << "Unable to open file: " << this->_filename << std::endl;
             }
+            return "ERROR:: Could not open file";
         }
 };
 
