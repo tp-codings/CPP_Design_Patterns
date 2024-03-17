@@ -1,0 +1,26 @@
+#ifndef DATASOURCEDECORATOR_H
+#define DATASOURCEDECORATOR_H
+
+#include "DataSource.h"
+
+class DataSourceDecorator : DataSource
+{
+    private:
+        DataSource* _wrappee;
+
+    public:
+        DataSourceDecorator(DataSource* s):
+        _wrappee(s)
+        {
+
+        }
+
+        virtual void writeData(std::string data) override{
+            this->_wrappee->writeData(data);
+        }
+
+        virtual std::string readData() override{
+            return this->_wrappee->readData();
+        }
+};
+#endif
