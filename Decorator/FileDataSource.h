@@ -5,7 +5,7 @@
 #include <iostream>
 #include <fstream>
 
-class FileDataSource : DataSource
+class FileDataSource : public DataSource
 {
 
     private:
