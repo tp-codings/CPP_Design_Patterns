@@ -14,6 +14,10 @@ class EncryptionDecorator : public DataSourceDecorator
         {
 
         }
+        ~EncryptionDecorator()
+        {
+            
+        }
 
         virtual void writeData(std::string data) override
         {

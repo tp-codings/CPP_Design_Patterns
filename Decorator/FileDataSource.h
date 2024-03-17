@@ -18,6 +18,10 @@ class FileDataSource : public DataSource
         {
 
         }
+        ~FileDataSource()
+        {
+            
+        }
 
         virtual void writeData(std::string data) override
         {

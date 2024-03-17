@@ -14,6 +14,10 @@ class DataSourceDecorator : public DataSource
         {
 
         }
+        ~DataSourceDecorator()
+        {
+            
+        }
 
         virtual void writeData(std::string data) override
         {

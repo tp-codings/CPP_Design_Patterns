@@ -15,6 +15,10 @@ class CompressionDecorator : public DataSourceDecorator
         {
 
         }
+        ~CompressionDecorator()
+        {
+            
+        }
 
         virtual void writeData(std::string data) override
         {
