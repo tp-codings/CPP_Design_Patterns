@@ -36,14 +36,15 @@ class FileDataSource : DataSource
 
         virtual std::string readData() override
         {
-            std::string data;
             std::ifstream myfile;
             myfile.open(this->_filename);
             if (myfile.is_open()) 
             {
+                std::string data;
                 std::getline(myfile, data);
                 myfile.close();
                 std::cout << "Data read from file: " << data << std::endl;
+                return data;
             } else 
             {
                 std::cerr << "Unable to open file: " << this->_filename << std::endl;
