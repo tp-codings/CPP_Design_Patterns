@@ -6,9 +6,9 @@ class DataSource
 {
     public:
         DataSource() = default;
-        virtual ~DataSource() = 0;
+        virtual ~DataSource() = default;
         virtual void writeData(std::string data) = 0;
-        virtual std::string readData();
+        virtual std::string readData() = 0;
 };
 
 
