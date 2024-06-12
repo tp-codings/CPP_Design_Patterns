@@ -1,7 +1,7 @@
 #ifndef DIRECTOR_H
 #define DIRECTOR_H
 
-#include "Builder.h"
+#include "AbstractBuilder.h"
 
 class Director
 {
@@ -9,13 +9,13 @@ class Director
         Director(){}
         ~Director(){}
 
-        void buildProductA(Builder* builder)
+        void buildProductA(AbstractBuilder* builder)
         {
             builder->buildStepA();
             builder->buildStepB();
         }
 
-        void buildProductB(Builder* builder)
+        void buildProductB(AbstractBuilder* builder)
         {
             builder->buildStepC();
         }

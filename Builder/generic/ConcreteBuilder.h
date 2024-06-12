@@ -1,11 +1,11 @@
-#ifndef CONCRETEBUILDERA_H
-#define CONCRETEBUILDERA_H
+#ifndef CONCRETEBUILDER_H
+#define CONCRETEBUILDER_H
 
-#include "Builder.h"
+#include "AbstractBuilder.h"
 #include "Product.h"
 
 class ConcreteBuilder
-: public Builder
+: public AbstractBuilder
 {
     public:
         ConcreteBuilder()

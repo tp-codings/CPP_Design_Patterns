@@ -1,19 +1,16 @@
-#ifndef BUILDER_H
-#define BUILDER_H
+#ifndef ABSTRACTBUILDER_H
+#define ABSTRACTBUILDER_H
 
-class Builder
+class AbstractBuilder
 {
     public:
-        Builder(){}
-        virtual ~Builder(){}
+        AbstractBuilder(){}
+        virtual ~AbstractBuilder(){}
 
         virtual void reset() = 0;
         virtual void buildStepA() = 0;
         virtual void buildStepB() = 0;
         virtual void buildStepC() = 0;
-
-    protected:
-
 };
 
 #endif

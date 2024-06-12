@@ -18,12 +18,11 @@ class Product
             std::cout << "-------------- P R O D U C T --------------" << std::endl 
             << this->dumpResult << std::endl;
         }
-
+        
         void setVariableA(std::string variableA)
         {
             this->dumpResult += variableA + " ";
         }
-
         void setVariableB(std::string variableB)
         {
             this->dumpResult += variableB + " ";
