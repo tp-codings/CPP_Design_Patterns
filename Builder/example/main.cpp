@@ -13,6 +13,7 @@ int main()
     Troll* adultIceTroll;
     Troll* youngMountainTroll;
     Troll* adultMountainTroll;
+    
     std::vector<Troll*> trolls;
 
     // Ice Troll
