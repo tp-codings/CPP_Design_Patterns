@@ -13,15 +13,15 @@ class SubConcretePrototype
             this->subMember = initValue;
         }
 
-        SubConcretePrototype(SubConcretePrototype* subConcretePrototype)
+        SubConcretePrototype(const SubConcretePrototype& subConcretePrototype)
         : ConcretePrototype(subConcretePrototype)
         {
-            this->subMember = subConcretePrototype->subMember;
+            this->subMember = subConcretePrototype.subMember;
         }
 
         virtual SubConcretePrototype* clone() override
         {
-            return new SubConcretePrototype(this);
+            return new SubConcretePrototype(*this);
         }
 
         virtual void incrementMember() override

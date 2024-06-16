@@ -12,14 +12,14 @@ class ConcretePrototype
         {
             this->member = initValue;
         }
-        ConcretePrototype(ConcretePrototype* concretePrototype)
+        ConcretePrototype(const ConcretePrototype& concretePrototype)
         {
-            this->member = concretePrototype->member;
+            this->member = concretePrototype.member;
         }
 
         virtual ConcretePrototype* clone() override
         {
-            return new ConcretePrototype(this);
+            return new ConcretePrototype(*this);
         }
 
         virtual void incrementMember()

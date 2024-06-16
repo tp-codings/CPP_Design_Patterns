@@ -7,9 +7,8 @@ int main()
     ConcretePrototype* prototype = new ConcretePrototype(42);
     ConcretePrototype* prototypeCopy = prototype->clone();
 
-    SubConcretePrototype* subPrototype = new SubConcretePrototype(815);
+    SubConcretePrototype* subPrototype = new SubConcretePrototype(4711);
     SubConcretePrototype* subPrototypeCopy = subPrototype->clone();
-
 
     prototypeCopy->incrementMember();
     subPrototypeCopy->incrementMember();
