@@ -34,7 +34,6 @@ class StorageAdapter
         Settings* settings;
         CloudServer* cloudServer;
         LocalFileSystem* localFileSystem;
-        
 };
 
 #endif
