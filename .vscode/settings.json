@@ -58,6 +58,8 @@
         "xloctime": "cpp",
         "algorithm": "cpp",
         "fstream": "cpp",
-        "optional": "cpp"
+        "optional": "cpp",
+        "set": "cpp",
+        "xtree": "cpp"
     }
 }
