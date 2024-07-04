@@ -21,7 +21,7 @@ class Proxy
             }
             else
             {
-                std::cout<<"Access denied!"<<std::endl;
+                std::cout << "Access denied!" << std::endl;
             }
         }
 
