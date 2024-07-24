@@ -18,13 +18,14 @@ class OpenGLFacade
             windowShouldClose = true;
         }
 
-        void pollEvents() 
+        void newRenderCycle(int& counter)
         {
-            this->openGLDemonstrator->pollEvents();
-        }
+            std::cout << "FACADE: New Render Cycle..." << std::endl;
 
-        void swapBuffers() 
-        {
+            this->openGLDemonstrator->pollEvents();
+       
+            this->openGLDemonstrator->renderImage(counter);
+        
             this->openGLDemonstrator->swapBuffers();
         }
 

@@ -10,12 +10,7 @@ int main()
 
     while(!openglFacade->shouldWindowClose())
     {
-
-        openglFacade->pollEvents();
-
-        std::cout << "Rendering image: " << imageCount++ << std::endl;
-
-        openglFacade->swapBuffers();
+        openglFacade->newRenderCycle(imageCount);
 
         if(imageCount > 5)
         {

@@ -30,6 +30,11 @@ class OpenGLDemonstrator
             std::cout << "--> OPENGLDEMONSTRATOR: Polling events..." << std::endl;
         }
 
+        void renderImage(int& counter)
+        {
+            std::cout << "--> OPENGLDEMONSTRATOR: Rendering image: " << counter++ << std::endl;
+        }
+
         void swapBuffers() 
         {
             std::cout << "--> OPENGLDEMONSTRATOR: Swapping buffers..." << std::endl;
