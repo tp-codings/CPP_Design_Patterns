@@ -10,6 +10,7 @@ class ConcreteAlgorithmA
         ConcreteAlgorithmA(){}
         ~ConcreteAlgorithmA(){}
 
+    protected:
         virtual void stepA() override
         {
             std::cout << "Specific algorithm step A for Concrete Algorithm A" << std::endl;

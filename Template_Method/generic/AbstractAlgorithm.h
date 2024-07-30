@@ -19,6 +19,7 @@ class AbstractAlgorithm
             std::cout << "---------- T E M P L A T E    M E T H O D    ->    E N D ----------" << std::endl << std::endl;
         }
     
+    protected:
         virtual void stepA() = 0;
         virtual void stepB() = 0;
 
