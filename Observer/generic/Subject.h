@@ -22,10 +22,11 @@ class Subject
                 this->observers.erase(it);
             }
         }
-        virtual void notify() = 0;
 
     protected:
         std::set<Observer*> observers;
+        
+        virtual void notify() = 0;
 
 
 };
