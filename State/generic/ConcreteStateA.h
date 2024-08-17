@@ -3,10 +3,7 @@
 
 #include "State.h"
 #include "ConcreteStateB.h" 
-
 #include <iostream>
-
-class ConcreteStateB;
 
 class ConcreteStateA
 : public State

@@ -1,0 +1,12 @@
+#ifndef COMMONDEFINITIONS_H
+#define COMMONDEFINITIONS_H
+
+enum LEVELTRANSITION {
+    START,
+    PAUSE,
+    RESUME,
+    QUIT,
+    COMPLETE
+};
+
+#endif
