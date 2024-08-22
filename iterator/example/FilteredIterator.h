@@ -21,7 +21,7 @@ class FilteredIterator
             return position < items.size();
         }
 
-        Item* next() override 
+        Item* getNext() override 
         {
             return hasNext() ? items[position++] : nullptr;
         }

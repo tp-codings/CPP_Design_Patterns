@@ -1,7 +1,7 @@
 #ifndef ITERATOR_H
 #define ITERATOR_H
 
-#include "Item.h"
+#include <string>
 
 class Iterator
 {
@@ -9,8 +9,8 @@ class Iterator
         Iterator(){}
         virtual ~Iterator(){}
 
-        virtual bool hasNext() const = 0;
-        virtual Item* getNext() = 0;
+        virtual int getNext() = 0;
+        virtual bool hasNext() = 0;
 };
 
 #endif

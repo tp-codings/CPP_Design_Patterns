@@ -19,15 +19,17 @@ int main() {
     sword->equip();
     manaPotion->equip();
 
-    Iterator* weaponIterator = inventory.createFilteredIterator([](Item* item) { return item->getType() == "Weapon"; });
-    Iterator* potionIterator = inventory.createFilteredIterator([](Item* item) { return item->getType() == "Potion"; });
+    Iterator* weaponIterator = inventory.createFilteredIterator([](Item* item) 
+    { return item->getType() == "Weapon"; });
+    Iterator* potionIterator = inventory.createFilteredIterator([](Item* item) 
+    { return item->getType() == "Potion"; });
     Iterator* equippedIterator = inventory.createEquippedIterator();
 
     std::cout << "Weapons in inventory:" << std::endl;
     
     while (weaponIterator->hasNext()) 
     {
-        Item* item = weaponIterator->next();
+        Item* item = weaponIterator->getNext();
         item->showDetail();
     }
     delete weaponIterator;
@@ -35,7 +37,7 @@ int main() {
     std::cout << "--------------------------" << std::endl << "Potions in inventory:" << std::endl;
     while (potionIterator->hasNext()) 
     {
-        Item* item = potionIterator->next();
+        Item* item = potionIterator->getNext();
         item->showDetail();
     }
     delete potionIterator;
@@ -43,7 +45,7 @@ int main() {
     std::cout << "--------------------------" << std::endl << "Equipped items in inventory:" << std::endl;
     while (equippedIterator->hasNext()) 
     {
-        Item* item = equippedIterator->next();
+        Item* item = equippedIterator->getNext();
         std::cout << "Equipped ";
         item->showDetail();
     }
