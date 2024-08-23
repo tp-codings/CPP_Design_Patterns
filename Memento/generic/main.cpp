@@ -27,4 +27,9 @@ int main()
     std::cout << "ORIGINATOR STATE: " << originator->getState() << std::endl;
     caretaker->undo();
     std::cout << "ORIGINATOR STATE: " << originator->getState() << std::endl;
+
+    delete originator;
+    delete caretaker;
+    
+    return 0;
 }

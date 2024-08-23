@@ -19,7 +19,7 @@ class Originator {
 
                 std::string getState() const 
                 {
-                    return state;
+                    return this->state;
                 }
         };
 
